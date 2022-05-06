@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>createagent documentation</title>
+<title>CallIntelligencePortalDocs.createagent API documentation</title>
 <meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
@@ -19,7 +19,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>createagent</code></h1>
+<h1 class="title">Module <code>CallIntelligencePortalDocs.createagent</code></h1>
 </header>
 <section id="section-intro">
 <details class="source">
@@ -36,8 +36,8 @@ def new_agent(agentname):
 
     Parameters
     ----------
-    user : str
-        Username provided by the user
+    agentname : str
+        Name of the agent given by the user
 
     &#34;&#34;&#34;
     bucket_name = &#34;audio-analysis-data&#34;
@@ -52,15 +52,15 @@ def new_agent(agentname):
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="createagent.new_agent"><code class="name flex">
+<dt id="CallIntelligencePortalDocs.createagent.new_agent"><code class="name flex">
 <span>def <span class="ident">new_agent</span></span>(<span>agentname)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Gets name of the agent from the user and creates a dedicated folder for the agent in an S3 bucket</p>
 <h2 id="parameters">Parameters</h2>
 <dl>
-<dt><strong><code>user</code></strong> :&ensp;<code>str</code></dt>
-<dd>Username provided by the user</dd>
+<dt><strong><code>agentname</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the agent given by the user</dd>
 </dl></div>
 <details class="source">
 <summary>
@@ -71,8 +71,8 @@ def new_agent(agentname):
 
     Parameters
     ----------
-    user : str
-        Username provided by the user
+    agentname : str
+        Name of the agent given by the user
 
     &#34;&#34;&#34;
     bucket_name = &#34;audio-analysis-data&#34;
@@ -93,12 +93,12 @@ def new_agent(agentname):
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="Index" href="index.html">Index</a></code></li>
+<li><code><a title="CallIntelligencePortalDocs" href="index.html">CallIntelligencePortalDocs</a></code></li>
 </ul>
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="createagent.new_agent" href="#createagent.new_agent">new_agent</a></code></li>
+<li><code><a title="CallIntelligencePortalDocs.createagent.new_agent" href="#CallIntelligencePortalDocs.createagent.new_agent">new_agent</a></code></li>
 </ul>
 </li>
 </ul>
