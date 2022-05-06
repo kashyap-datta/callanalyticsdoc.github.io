@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>CallIntelligencePortalDocs.dynamotodf API documentation</title>
+<title>dynamotodf documentation</title>
 <meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
@@ -19,7 +19,7 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>CallIntelligencePortalDocs.dynamotodf</code></h1>
+<h1 class="title">Module <code>dynamotodf</code></h1>
 </header>
 <section id="section-intro">
 <details class="source">
@@ -32,12 +32,19 @@ import streamlit as st
 
 def dbtodf():
 
-    &#34;&#34;&#34;Gets data from the DynamoDB 
+    &#34;&#34;&#34;Gets username and password, authenticates them against AWS Cognito users and returns status code
+
+    Parameters
+    ----------
+    user : str
+        Username provided by the user
+    password : str
+        Password provided by the user
 
     Returns
     -------
-    dataframe
-        Latest data from the DynamoDB table into dataframe
+    int
+        An integer representing the status code of the authentication request
     &#34;&#34;&#34;
    
     dynamodb = boto3.resource(&#39;dynamodb&#39;,aws_access_key_id=st.secrets[&#34;Access_Key_ID&#34;],aws_secret_access_key=st.secrets[&#34;Secret_Access_Key&#34;],region_name=&#39;us-east-1&#39;)
@@ -105,7 +112,7 @@ def getAgentData(data,agent):
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="CallIntelligencePortalDocs.dynamotodf.checkfile"><code class="name flex">
+<dt id="dynamotodf.checkfile"><code class="name flex">
 <span>def <span class="ident">checkfile</span></span>(<span>data, key)</span>
 </code></dt>
 <dd>
@@ -149,15 +156,22 @@ def getAgentData(data,agent):
         return pd.DataFrame()</code></pre>
 </details>
 </dd>
-<dt id="CallIntelligencePortalDocs.dynamotodf.dbtodf"><code class="name flex">
+<dt id="dynamotodf.dbtodf"><code class="name flex">
 <span>def <span class="ident">dbtodf</span></span>(<span>)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Gets data from the DynamoDB </p>
+<div class="desc"><p>Gets username and password, authenticates them against AWS Cognito users and returns status code</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>user</code></strong> :&ensp;<code>str</code></dt>
+<dd>Username provided by the user</dd>
+<dt><strong><code>password</code></strong> :&ensp;<code>str</code></dt>
+<dd>Password provided by the user</dd>
+</dl>
 <h2 id="returns">Returns</h2>
 <dl>
-<dt><code>dataframe</code></dt>
-<dd>Latest data from the DynamoDB table into dataframe</dd>
+<dt><code>int</code></dt>
+<dd>An integer representing the status code of the authentication request</dd>
 </dl></div>
 <details class="source">
 <summary>
@@ -165,12 +179,19 @@ def getAgentData(data,agent):
 </summary>
 <pre><code class="python">def dbtodf():
 
-    &#34;&#34;&#34;Gets data from the DynamoDB 
+    &#34;&#34;&#34;Gets username and password, authenticates them against AWS Cognito users and returns status code
+
+    Parameters
+    ----------
+    user : str
+        Username provided by the user
+    password : str
+        Password provided by the user
 
     Returns
     -------
-    dataframe
-        Latest data from the DynamoDB table into dataframe
+    int
+        An integer representing the status code of the authentication request
     &#34;&#34;&#34;
    
     dynamodb = boto3.resource(&#39;dynamodb&#39;,aws_access_key_id=st.secrets[&#34;Access_Key_ID&#34;],aws_secret_access_key=st.secrets[&#34;Secret_Access_Key&#34;],region_name=&#39;us-east-1&#39;)
@@ -186,7 +207,7 @@ def getAgentData(data,agent):
     return df</code></pre>
 </details>
 </dd>
-<dt id="CallIntelligencePortalDocs.dynamotodf.getAgentData"><code class="name flex">
+<dt id="dynamotodf.getAgentData"><code class="name flex">
 <span>def <span class="ident">getAgentData</span></span>(<span>data, agent)</span>
 </code></dt>
 <dd>
@@ -246,14 +267,14 @@ def getAgentData(data,agent):
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="CallIntelligencePortalDocs" href="index.html">CallIntelligencePortalDocs</a></code></li>
+<li><code><a title="Index" href="index.html">Index</a></code></li>
 </ul>
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="CallIntelligencePortalDocs.dynamotodf.checkfile" href="#CallIntelligencePortalDocs.dynamotodf.checkfile">checkfile</a></code></li>
-<li><code><a title="CallIntelligencePortalDocs.dynamotodf.dbtodf" href="#CallIntelligencePortalDocs.dynamotodf.dbtodf">dbtodf</a></code></li>
-<li><code><a title="CallIntelligencePortalDocs.dynamotodf.getAgentData" href="#CallIntelligencePortalDocs.dynamotodf.getAgentData">getAgentData</a></code></li>
+<li><code><a title="dynamotodf.checkfile" href="#dynamotodf.checkfile">checkfile</a></code></li>
+<li><code><a title="dynamotodf.dbtodf" href="#dynamotodf.dbtodf">dbtodf</a></code></li>
+<li><code><a title="dynamotodf.getAgentData" href="#dynamotodf.getAgentData">getAgentData</a></code></li>
 </ul>
 </li>
 </ul>
